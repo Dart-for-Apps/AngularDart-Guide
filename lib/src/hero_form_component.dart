@@ -22,4 +22,15 @@ class HeroFormComponent {
   List<String> get powers => _powers;
 
   void onSubmit() => submitted = true;
+
+  Map<String, bool> setCssValidityClass(NgControl control) {
+    final validityClass = control.valid == true? 'is-valid' : 'is-invalid';
+    return {validityClass: true};
+  }
+
+  void clear() {
+    model.name ='';
+    model.power = _powers[0];
+    model.alterEgo = '';
+  }
 }
