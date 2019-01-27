@@ -1,4 +1,4 @@
-<div class="container">
+<div [hidden]="submitted" class="container">
   <h1>Hero Form</h1>
   <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
     <div class="form-group">
@@ -36,10 +36,29 @@
           Submit
         </button>
       </div>
-      <small class="col text-right">*&nbsp;Required</small>
+      <button (click)="clear()" type="button" class="btn">
+        Clear
+      </button>
+      <small class="col text-right inline">*&nbsp;Required</small>
     </div>
-    <button (click)="clear()" type="button" class="btn">
-      Clear
-    </button>
   </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h1>Hero Data</h1>
+  <table class="table">
+    <tr>
+      <th>Name</th>
+      <td>{{model.name}}</td>
+    </tr>
+    <tr>
+      <th>Alter Ego</th>
+      <td>{{model.alterEgo}}</td>
+    </tr>
+    <tr>
+      <th>Power</th>
+      <td>{{model.power}}</td>
+    </tr>
+  </table>
+  <button (click)="submitted=false" class="btn btn-primary">Edit</button>
 </div>
