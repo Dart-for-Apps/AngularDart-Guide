@@ -25,6 +25,11 @@ webdev에 의한 auto reload는 provider를 변경할 시에 제대로 동작하
 수정한 뒤에 `Arguments of a constant creation must be constant expressions.`
 와 같은 에러가 날 경우 webdev를 종료하고 다시 수행하길 권장함.
 
+## GUIDE의 Template Syntax 챕터
+
+해당 챕터는 본 저장소에서 다루지 않습니다. 직접 읽어보고 실습하길 권장합니다.
+[Tmpelate Syntax](https://webdev.dartlang.org/angular/guide/template-syntax)
+
 ## 사용 환경
 
 본 프로젝트는 Webstorm을 사용하였습니다. 다트 및 웹데브 관련 툴킷을 정상 설치 하였다면
