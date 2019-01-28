@@ -4,10 +4,13 @@ import '../logger_service.dart';
 
 class HeroService {
   final Logger _logger;
-  HeroService(this._logger);
+  final bool _isAuthorized;
+
+  HeroService(this._logger, this._isAuthorized);
   List<Hero> getAll() {
-    _logger.fine('Getting heroes ....');
+    var auth = _isAuthorized ? 'authorized' : 'unauthorized';
+    _logger.fine('Getting heroes for $auth user');
     print(_logger.toString());
-    return mockHeroes;
+    return mockHeroes.where((hero) => _isAuthorized || !hero.isSecret).toList();
   }
 }

@@ -1,3 +1,4 @@
+import 'heroes/user_service.dart';
 class Logger {
   String _log = '';
   String get id => 'Logger Service';
@@ -10,4 +11,12 @@ class Logger {
 
 class BetterLogger extends Logger {
   String get id => 'Better Logger';
+}
+
+class EvenBetterLogger extends Logger {
+  final UserService _userService;
+
+  EvenBetterLogger(this._userService);
+  String get id => 'EvenBetterLogger';
+  String toString() => super.toString() + ' (user: ${_userService.user.name})';
 }
