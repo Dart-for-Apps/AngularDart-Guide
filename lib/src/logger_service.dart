@@ -7,3 +7,7 @@ class Logger {
   @override
   String toString() => '[$id] $_log';
 }
+
+class BetterLogger extends Logger {
+  String get id => 'Better Logger';
+}

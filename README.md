@@ -16,7 +16,14 @@
 `lib/src` 폴더에 곧바로 작성된 코드의 경우 가이드의 1에서 7챕터까지의 예제를 담고
 있습니다. `lib/src/car_without_injector` 폴더에 작성된 코드의 경우, 가이드 챕터 8의
 초반 `Car` 예제를 담고 있습니다. 나머지 `heroes`에 있는 코드는, 가이드 챕터 8의
-`Car` 예제 이후 부분을 담고 있습니다. 
+`Car` 예제 이후 부분을 담고 있습니다.
+
+## Provider 변경시 주의 사항
+
+webdev에 의한 auto reload는 provider를 변경할 시에 제대로 동작하지 않을 수 있음.
+이는 이미 기존에 컴파일된 인스턴스에 다시 인젝션을 시도하기 때문이므로, provider를
+수정한 뒤에 `Arguments of a constant creation must be constant expressions.`
+와 같은 에러가 날 경우 webdev를 종료하고 다시 수행하길 권장함.
 
 ## 사용 환경
 
