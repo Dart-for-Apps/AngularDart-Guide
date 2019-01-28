@@ -9,7 +9,7 @@ import 'hero_service.dart';
     <h2>Heroes</h2>
     <hero-list></hero-list>
     ''',
-    providers: [ClassProvider(HeroService)],
+    providers: [ClassProvider(HeroService),],
     directives: [HeroListComponent],
 )
 class HeroesComponent{}
