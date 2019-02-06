@@ -12,6 +12,7 @@ const List<String> _powers = [
 
 @Component(
   selector: 'hero-form',
+  styleUrls: ['hero_form_component.css',],
   templateUrl: 'hero_form_component.html',
   directives: [coreDirectives, formDirectives],
 )
